@@ -5,3 +5,39 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+product = Product.new(
+  name: "Thunderfury, Blessed Blade of the Windseeker",
+  price: 1000000,
+  image_url: "https://i.ytimg.com/vi/2TGRpvb5Nos/maxresdefault.jpg",
+  description: "Thunderfury, Blessed Blade of the Windseeker is the legendary sword once wielded by Thunderaan, Prince of Air."
+  )
+
+product.save
+
+product = Product.new(
+  name: "Thori'dal, the Stars' Furyr",
+  price: 5000000,
+  image_url: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bfd5f251-4987-4812-ab8d-da8ae166c5a1/d5bii1f-0846702c-662f-4f95-8382-5727b2015106.png/v1/fill/w_900,h_507,q_80,strp/thori_dal__the_stars__fury_by_zajeczyca_d5bii1f-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTA3IiwicGF0aCI6IlwvZlwvYmZkNWYyNTEtNDk4Ny00ODEyLWFiOGQtZGE4YWUxNjZjNWExXC9kNWJpaTFmLTA4NDY3MDJjLTY2MmYtNGY5NS04MzgyLTU3MjdiMjAxNTEwNi5wbmciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.7u2Kmm1vq5hYtvy0lxQNBPp6CQZUdgsYaPM2DEEEgwY",
+  description: "The legendary bow resonates with the power of the Sunwell. The origins and history of the weapon remain a mystery."
+  )
+
+product.save
+
+product = Product.new(
+  name: "Val'anyr, Hammer of Ancient Kings",
+  price: 10000000,
+  image_url: "https://www.digiseller.ru/preview/126187/p1_20521184254567.PNG",
+  description: "Created by the titans themselves, Val'anyr was given to the first Earthen king, Urel Stoneheart. With it, he was to create and give life to the rest of his brethren. Val'anyr was shattered during the first war between the earthen and the iron dwarves. The weapon's remnants were believed lost in the conflict."
+  )
+
+product.save
+
+product = Product.new(
+  name: "Sulfuras, Hand of Ragnaros",
+  price: 70000000,
+  image_url: "https://img-new.cgtrader.com/items/900746/fe53657cd3/sulfuras-hand-of-ragnaros-3d-model-low-poly-obj-mtl-fbx-c4d-ma-mb-stl.jpg",
+  description: "Sulfuras is the mighty weapon of Ragnaros the Firelord. The weapon never leaves his grasp. It is composed of flaming red elementium and etched from end to end with intricate runes that seem to move like flowing lava across the weapons surface."
+  )
+
+product.save
