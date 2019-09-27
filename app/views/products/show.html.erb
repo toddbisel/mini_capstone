@@ -1,0 +1,20 @@
+<h1>Product Show</h1>
+
+    <h2>id: <%= @product.id %></h2>
+    <h2>name: <%= @product.name %></h2>
+    <h2>price: <%= @product.price %></h2>
+    <h2>description: <%= @product.description %></h2>
+    <h2>discounted: <%= @product.is_discounted? %></h2>
+    <h2>tax: <%= @product.tax %></h2>
+    <h2>total: <%= @product.total %></h2> 
+    <% @product.images.each do |image| %>
+      <img src="<%= image.url %>" alt="">
+    <% end %>
+    <h2>price: <%= number_to_currency(@product.price) %></h2>
+    <h2>tax: <%= number_to_currency(@product.tax) %></h2>
+    <h2>total: <%= number_to_currency(@product.total) %></h2>
+    <h2>supplier_info: <%= @product.supplier.name %></h2>
+    <h2>product_categories: <%= @product.category_names %></h2>
+
+    <h1><a href="/products/edit/<%= @product.id %>">Edit Product</h1><br>
+    <h1><a href="/products/">All Products</a></h1>

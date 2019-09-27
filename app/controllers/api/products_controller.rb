@@ -1,5 +1,7 @@
 class Api::ProductsController < ApplicationController
 
+  before_action :authenticate_admin, except: [:index, :show]
+
   def index
     
     @products = Product.all
@@ -12,11 +14,17 @@ class Api::ProductsController < ApplicationController
       @products = Product.where("price <= ?", 1000000)
     end
 
-    if params[:sort] == "price"
-      @products = @products.order(:price)  
-      if params[:sort_order] == "desc"
+    if params[:category]
+      category = Category.find_by("name iLIKE ?", params[:category])
+      @products = category.products
+    end
+
+    if params[:sort] == "price" && params[:sort_order] == "asc"
+      @products = @products.order(:price)
+    elsif params[:sort] == "price" && params[:sort_order] == "desc"
       @products = @products.order(price: :desc)
-      end
+    else
+      @products = @products.order(:id)
     end
 
     render 'index.json.jb'

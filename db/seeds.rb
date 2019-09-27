@@ -14,38 +14,33 @@ Supplier.create(name: "Ulduar", email: "Yogg@Ulduar.com", phone_number: "467.299
 
 
 
-product = Product.new(
+Product.create(
   name: "Thunderfury, Blessed Blade of the Windseeker",
-  price: 1000000,
-  description: "Thunderfury, Blessed Blade of the Windseeker is the legendary sword once wielded by Thunderaan, Prince of Air."
+  price: 100,
+  description: "Thunderfury, Blessed Blade of the Windseeker is the legendary sword once wielded by Thunderaan, Prince of Air.",
+  supplier_id: 1
   )
 
-product.save
-
-product = Product.new(
+Product.create(
   name: "Thori'dal, the Stars' Furyr",
-  price: 5000000,
-  description: "The legendary bow resonates with the power of the Sunwell. The origins and history of the weapon remain a mystery."
+  price: 500,
+  description: "The legendary bow resonates with the power of the Sunwell. The origins and history of the weapon remain a mystery.",
+  supplier_id: 2
   )
 
-product.save
-
-product = Product.new(
+Product.create(
   name: "Val'anyr, Hammer of Ancient Kings",
-  price: 10000000,
-  description: "Created by the titans themselves, Val'anyr was given to the first Earthen king, Urel Stoneheart. With it, he was to create and give life to the rest of his brethren. Val'anyr was shattered during the first war between the earthen and the iron dwarves. The weapon's remnants were believed lost in the conflict."
+  price: 10000,
+  description: "Created by the titans themselves, Val'anyr was given to the first Earthen king, Urel Stoneheart. With it, he was to create and give life to the rest of his brethren. Val'anyr was shattered during the first war between the earthen and the iron dwarves. The weapon's remnants were believed lost in the conflict.",
+  supplier_id: 3
   )
 
-product.save
-
-product = Product.new(
+Product.create(
   name: "Sulfuras, Hand of Ragnaros",
-  price: 70000000,
-  description: "Sulfuras is the mighty weapon of Ragnaros the Firelord. The weapon never leaves his grasp. It is composed of flaming red elementium and etched from end to end with intricate runes that seem to move like flowing lava across the weapons surface."
+  price: 7000,
+  description: "Sulfuras is the mighty weapon of Ragnaros the Firelord. The weapon never leaves his grasp. It is composed of flaming red elementium and etched from end to end with intricate runes that seem to move like flowing lava across the weapons surface.",
+  supplier_id: 1
   )
-
-product.save
-
 
 
 Image.create!([
@@ -61,7 +56,5 @@ Image.create!([
   {
     url: "https://img-new.cgtrader.com/items/900746/fe53657cd3/sulfuras-hand-of-ragnaros-3d-model-low-poly-obj-mtl-fbx-c4d-ma-mb-stl.jpg", product_id: "4"
   },
-  {
-    url: "https://img-new.cgtrader.com/items/900746/fe53657cd3/sulfuras-hand-of-ragnaros-3d-model-low-poly-obj-mtl-fbx-c4d-ma-mb-stl.jpg", product_id: "5"
-  }
+  {url: "https://wow.zamimg.com/uploads/screenshots/normal/83776-thunderfury-blessed-blade-of-the-windseeker.jpg", product_id: "1"}
 ])

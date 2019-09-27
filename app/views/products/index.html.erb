@@ -1,0 +1,29 @@
+<h1>Products Index</h1>
+
+<% @products.each do |product| %>
+
+    <h2>id: <%= product.id %></h2>
+    <h2>name: <%= product.name %></h2>
+    <img src="<%= product.images[0].url %>" alt="">
+    <h2>price: <%= product.price %></h2>
+    <h2>description: <%= product.description %></h2>
+    <h2>discounted: <%= product.is_discounted? %></h2>
+    <h2>tax: <%= product.tax %></h2>
+    <h2>total: <%= product.total %></h2>
+    <h2>price: <%= number_to_currency(product.price) %></h2>
+    <h2>tax: <%= number_to_currency(product.tax) %></h2>
+    <h2>total: <%= number_to_currency(product.total) %></h2>
+    <h2>supplier_info: <%= product.supplier.name %></h2>
+    <h2>product_categories: <%= product.category_names %></h2>
+
+    <a href="/products/<%= product.id%>">More Info</a>
+  <% end %>
+
+ <div class="card" style="width: 18rem;">
+   <img src="..." class="card-img-top" alt="...">
+   <div class="card-body">
+     <h5 class="card-title">Card title</h5>
+     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+   </div>
+ </div>

@@ -13,5 +13,9 @@
       total: number_to_currency(product.total)
     },
 
-    supplier_info: product.supplier
+    supplier_info: product.supplier,
+    current_user: current_user,
+
+    product_categories: product.category_names
+
   }

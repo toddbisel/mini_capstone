@@ -1,0 +1,13 @@
+{
+  user_id: current_user.id,
+ 
+  order_info: {
+    # item_name: @order.product.name,
+    # item_price: @order.product.price,
+    # quantity: @order.quantity,
+    order_subtotal: @order.subtotal,
+    order_tax: @order.tax,
+    order_total: @order.total
+
+  }
+}
